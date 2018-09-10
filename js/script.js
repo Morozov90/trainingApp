@@ -43,14 +43,10 @@
     }
 
 
-document.addEventListener("DOMContentLoaded", function () {
+    window.onload = function () {
         createMatrix(rows, cols);
         deleteElem();
-    });
-    // window.onload = function () {
-    //     createMatrix(rows, cols);
-    //     deleteElem();
-    // };
+    };
 
     add__row.addEventListener("click", function () {
         if (rows.length < 10) {
@@ -97,18 +93,25 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     add__row.addEventListener("mouseenter", function () {
-        del__cell.style.left = this.offsetLeft  + "px";
-        del__row.style.top = this.offsetTop - 42 + "px";
-        console.log(1)
+        if (cols.length > 1 ) {
+            del__cell.style.left = this.offsetLeft  + "px";
+            del__row.style.top = this.offsetTop - 42 + "px";
+        } 
     });
 
     add__cell.addEventListener("mouseenter", function () {
-        del__cell.style.left = this.offsetLeft - 42 + "px";
-        del__row.style.top = this.offsetTop  + "px";
+        if (rows.length > 1 ) {
+            del__cell.style.left = this.offsetLeft - 42 + "px";
+            del__row.style.top = this.offsetTop  + "px";
+        }
     });
 
     wrapper.addEventListener("mouseenter", function (e) {
-        del__row.classList.add("open");
-        del__cell.classList.add("open");
+        if (rows.length > 1 ) {
+            del__row.classList.add("open");
+        }
+        if (cols.length > 1) {
+            del__cell.classList.add("open");
+        }
     });
 })();
