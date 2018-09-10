@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    padding: 40px;
+    margin: 100px;
+    position: relative;
+    display: inline-block;
+}
+
+.task {
+}
+
+.cell {
+    width: 40px;
+    height: 40px;
+    background: blue;
+    border: 1px solid #000000;
+}
+
+.del{
+    border: 2px solid #000000;
+    width: 40px;
+    height: 40px;
+    background: red;
+    cursor: pointer;
+}
+
+.del:hover{
+    opacity: 0.5 !important;
+}
+
+.add {
+    border: 2px solid #000000;
+    width: 40px;
+    height: 40px;
+    background: green;
+    cursor: pointer;
+}
+
+.add:hover{
+    opacity: 0.5 !important;
+}
+
+.add__cell {
+    position: absolute;
+    top: 42px;
+    right: 0;
+}
+
+.add__row {
+    position: absolute;
+    bottom: 0;
+    left: 42px;
+}
+
+.del__cell {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 2px;
+}
+
+.del__row {
+    display: none;
+    top: 2px;
+    left: 0;
+    position: absolute;
+}
+
+.open {
+    display: block;
+}
