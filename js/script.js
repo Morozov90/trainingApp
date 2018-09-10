@@ -43,10 +43,14 @@
     }
 
 
-    window.onload = function () {
+document.addEventListener("DOMContentLoaded", function () {
         createMatrix(rows, cols);
         deleteElem();
-    };
+    });
+    // window.onload = function () {
+    //     createMatrix(rows, cols);
+    //     deleteElem();
+    // };
 
     add__row.addEventListener("click", function () {
         if (rows.length < 10) {
