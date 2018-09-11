@@ -24,8 +24,8 @@
         document.querySelectorAll(".cell").forEach(function (elem ) {
 
             elem.addEventListener("mouseenter", function () {
-                del__cell.style.left = this.offsetLeft + 40 + "px";
-                del__row.style.top = this.offsetTop + 40 + "px";
+                del__cell.style.left = this.offsetLeft  + "px";
+                del__row.style.top = this.offsetTop + "px";
                 if (rows.length > 1 ) {
                     del__row.classList.add("open");
                 }
@@ -99,18 +99,18 @@ document.addEventListener("DOMContentLoaded", function () {
     add__row.addEventListener("mouseenter", function () {
         if (cols.length > 1 ) {
             del__cell.style.left = this.offsetLeft  + "px";
-            del__row.style.top = this.offsetTop - 42 + "px";
+            del__row.style.top = this.offsetTop -42 + "px";
         } 
     });
 
     add__cell.addEventListener("mouseenter", function () {
         if (rows.length > 1 ) {
-            del__cell.style.left = this.offsetLeft - 42 + "px";
+            del__cell.style.left = this.offsetLeft -42 + "px";
             del__row.style.top = this.offsetTop  + "px";
         }
     });
 
-    wrapper.addEventListener("mouseenter", function (e) {
+    wrapper.addEventListener("mouseenter", function () {
         if (rows.length > 1 ) {
             del__row.classList.add("open");
         }

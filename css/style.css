@@ -3,7 +3,7 @@
 }
 
 .wrapper {
-    padding: 40px;
+    padding: 0 40px 40px 0;
     margin: 100px;
     position: relative;
     display: inline-block;
@@ -45,27 +45,27 @@
 
 .add__cell {
     position: absolute;
-    top: 42px;
+    top: 2px;
     right: 0;
 }
 
 .add__row {
     position: absolute;
     bottom: 0;
-    left: 42px;
+    left: 2px;
 }
 
 .del__cell {
     display: none;
     position: absolute;
-    top: 0;
+    top: -40px;
     left: 2px;
 }
 
 .del__row {
     display: none;
     top: 2px;
-    left: 0;
+    left: -40px;
     position: absolute;
 }
 
